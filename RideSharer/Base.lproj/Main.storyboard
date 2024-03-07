@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ride History View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RideHistoryViewController" customModule="RideSharer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aVz-vL-jgt">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="435"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPy-cK-9gO">
+                                <rect key="frame" x="0.0" y="432" width="393" height="420"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kPy-cK-9gO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2nU-K3-utz"/>
+                            <constraint firstItem="kPy-cK-9gO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Brd-CP-E5c"/>
+                            <constraint firstItem="kPy-cK-9gO" firstAttribute="leading" secondItem="aVz-vL-jgt" secondAttribute="leading" id="ILs-Aj-DXP"/>
+                            <constraint firstItem="kPy-cK-9gO" firstAttribute="trailing" secondItem="aVz-vL-jgt" secondAttribute="trailing" id="X9O-Kk-3h4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aVz-vL-jgt" secondAttribute="bottom" constant="383" id="Y7x-5X-naS"/>
+                            <constraint firstItem="kPy-cK-9gO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="373" id="fOe-t9-E4k"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="kPy-cK-9gO" secondAttribute="bottom" constant="-34" id="fWV-se-xqy"/>
+                            <constraint firstItem="aVz-vL-jgt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-59" id="mxw-dU-a1R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="kPy-cK-9gO" id="Ymx-bZ-HlD"/>
+                        <outlet property="tableView" destination="aVz-vL-jgt" id="JkB-0M-qDr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
